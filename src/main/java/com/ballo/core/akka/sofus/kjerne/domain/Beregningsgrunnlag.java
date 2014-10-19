@@ -3,7 +3,7 @@ package com.ballo.core.akka.sofus.kjerne.domain;
 public class Beregningsgrunnlag {
     private final String identifikator;
     private Skattegrunnlag skattegrunnlag;
-    private SERGgrunnlag serggrunnlag;
+    private SERGgrunnlag SERGgrunnlag;
 
     public Beregningsgrunnlag(String identifikator) {
         this.identifikator = identifikator;
@@ -17,12 +17,12 @@ public class Beregningsgrunnlag {
         return skattegrunnlag;
     }
 
-    public void setSerggrunnlag(SERGgrunnlag serggrunnlag) {
-        this.serggrunnlag = serggrunnlag;
+    public void setSERGgrunnlag(SERGgrunnlag SERGgrunnlag) {
+        this.SERGgrunnlag = SERGgrunnlag;
     }
 
-    public SERGgrunnlag getSerggrunnlag() {
-        return serggrunnlag;
+    public SERGgrunnlag getSERGgrunnlag() {
+        return SERGgrunnlag;
     }
 
     public String getIdentifikator() {

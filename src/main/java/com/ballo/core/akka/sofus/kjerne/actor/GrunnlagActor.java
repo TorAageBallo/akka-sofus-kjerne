@@ -49,7 +49,7 @@ public class GrunnlagActor extends AbstractActor {
             for (String identifikator : identifikatorer) {
                 Beregningsgrunnlag beregningsgrunnlag = new Beregningsgrunnlag(identifikator);
                 beregningsgrunnlag.setSkattegrunnlag(skattegrunnlagForId.get(identifikator));
-                beregningsgrunnlag.setSerggrunnlag(serggrunnlagForId.get(identifikator));
+                beregningsgrunnlag.setSERGgrunnlag(serggrunnlagForId.get(identifikator));
 
                 beregningsgrunnlagListe.add(beregningsgrunnlag);
                 System.out.println("Hentet grunnlag for identifikator " + identifikator);
