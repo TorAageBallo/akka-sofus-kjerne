@@ -14,7 +14,7 @@ public class SkattegrunnlagActor extends AbstractActor {
     public SkattegrunnlagActor() {
         receive(ReceiveBuilder.match(HentGrunnlag.class, message -> {
                     Map<String, Skattegrunnlag> skattegrunnlagForId = SkatteinfoRepository.hentSkattegrunnlagFraSkatteinfo(message.getIdentifikatorer());
-                    sender().tell(new SkattegrunnlagHentet(skattegrunnlagForId), self());
+                    sender().tell(new SkattegrunnlagHentet(skattegrunnlagForId, message.getMeldingId()), self());
                 }
         ).build());
     }

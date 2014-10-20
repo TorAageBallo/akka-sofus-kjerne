@@ -15,7 +15,7 @@ public class SERGgrunnlagActor extends AbstractActor {
         receive(ReceiveBuilder.match(HentGrunnlag.class, message -> {
                     Map<String, SERGgrunnlag> serggrunnlagForId =
                             SkatteinfoRepository.hentSerggrunnlagFraSkatteinfo(message.getIdentifikatorer());
-                    sender().tell(new SerggrunnlagHentet(serggrunnlagForId), self());
+                    sender().tell(new SerggrunnlagHentet(serggrunnlagForId, message.getMeldingId()), self());
                 }
         ).build());
     }
